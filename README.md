@@ -1,4 +1,5 @@
 # DiffSemanticFusion
+![github_diffsemanticfusion](https://github.com/user-attachments/assets/8bba0baa-252b-4be9-af3c-26f92c9f2f9b)
 
 This is the official release of SemanticFusion, Our approach reasons over a semantic raster–fused BEV space, enhanced by a map diffusion module that improves both the stability and expressiveness of online HD map representations.
 
