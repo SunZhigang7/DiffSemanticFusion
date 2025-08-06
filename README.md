@@ -17,14 +17,19 @@ Shichen Tang<sup>1</sup>, Lavdim Halilaj<sup>5</sup>, Juergen Luettin<sup>5</sup
 </div>
 
 
-<!-- ## Introduction -->
+## Overview
+
+![github_diffsemanticfusion](https://github.com/user-attachments/assets/8bba0baa-252b-4be9-af3c-26f92c9f2f9b)
+
+<div align="center">
+<img src="assets/map_diffusion.jpg" width="400">
+</div>
+
 ## Abstract         
 
 Autonomous driving requires accurate scene understanding, including road geometry, traffic agents, and their semantic relationships. In online HD map generation scenarios, raster-based representations are well-suited to vision models but lack geometric precision, while graph-based representations retain structural detail but become unstable without precise maps. To harness the complementary strengths of both, we propose DiffSemanticFusion—a fusion framework for multimodal trajectory prediction and planning. Our approach reasons over a semantic raster–fused BEV space, enhanced by a map diffusion module that improves both the stability and expressiveness of online HD map representations. We validate our framework on two downstream tasks: trajectory prediction and planning-oriented end-to-end autonomous driving. Experiments on real-world autonomous driving benchmarks, nuScenes and NAVSIM, demonstrate improved performance over several state-of-the-art (SOTA) methods. For the prediction task on nuScenes, we integrate DiffSemanticFusion with the online HD map informed QCNet, achieving a 5.1\% performance improvement. For end-to-end autonomous driving in NAVSIM, DiffSemanticFusion achieves SOTA results, with a 15\% performance gain in NavHard scenarios. In addition, extensive ablation and sensitivity studies show that our map diffusion module can be seamlessly integrated into other vector-based approaches to enhance performance. 
 
-## Overview
 
-![github_diffsemanticfusion](https://github.com/user-attachments/assets/8bba0baa-252b-4be9-af3c-26f92c9f2f9b)
 
 ## News
 `[2025/08/06]` [ArXiv](https://www.arxiv.org/pdf/2508.01778) paper release. Code/Models are coming soon. Please stay tuned! ☕️
