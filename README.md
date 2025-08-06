@@ -14,7 +14,10 @@ We are going to release code step by step:
 
 Note: Due to policy, SemanticFormer can't be open source, so we only open source homogeneous graph fusion with BEV
 
-If our work is helpful, please consider cite:
+Note: Code needs to be cleaned and I will open source all the code within one month. As I promised.
+
+
+If our work is helpful, please consider cite
 
 ## 📄 Citation
 

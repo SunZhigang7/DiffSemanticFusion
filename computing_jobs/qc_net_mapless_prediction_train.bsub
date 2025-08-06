@@ -1,0 +1,48 @@
+#!/bin/bash -l
+# Sample script for pytorch job
+
+## Scheduler parameters ##
+
+#BSUB -J qc_net_mapless_prediction_train             # job name
+#BSUB -o /home/szu3sgh/xc_slash/QCNet/computing_jobs/qc_net_mapless_prediction_train.%J.stdout      # optional: Have output written to specific file
+#BSUB -e /home/szu3sgh/xc_slash/QCNet/computing_jobs/qc_net_mapless_prediction_train.%J.stderr      # optional: Have errors written to specific file
+#BSUB -n 6                         # min CPU cores,max CPU cores (max cores is optional)
+#BSUB -M 60000                       # fill in required amount of memory per CPU core(in Mbyte)
+#BSUB -W 60:00                       # fill in desired wallclock time [hours,]minutes (hours are optional)
+#BSUB -gpu "num=1:mode=exclusive_process:mps=no:aff=no"
+# #BSUB -m szh-hpc-b01gp05
+# #BSUB -m szh-hpc-b02gp02
+# #BSUB -m szh-hpc-b02gp04
+# #BSUB -R "span[hosts=1]"          # optional: run on single host (if using more than 1 CPU cores)
+# #BSUB -R "span[ptile=28]"         # optional: fill in to specify cores per node (max 28)
+# #BSUB -P qc_net_mapless_prediction_train             # optional: fill in cluster project
+
+## Job parameters ##
+
+# Anaconda virtualenv to be used
+# Create before runnign the job with e.g.
+# conda create -n pytorch-3.5 python=3.5 pytorch torchvision
+vEnv=/home/szu3sgh/.conda/envs/qcnet # (please change)
+
+# Load modules
+module purge
+module load conda/4.8.5
+module load cuda/12.1.1
+
+
+# Activate environment
+source activate $vEnv
+
+# Run your code here (please change, this is only an example)
+
+python train_mapless_qcnet_nuscenes.py --root /fs/scratch/Sgh_CR_RIX/SGH_CR_RIX/rix2_shared/nuscenes_omg_dataset/stream \
+                      --train_batch_size 10 --val_batch_size 5 --test_batch_size 1 --devices 1 --dataset nuscenes \
+                      --num_historical_steps 20 --num_future_steps 30 --num_recurrent_steps 3 --pl2pl_radius 150 \
+                      --time_span 10 --pl2a_radius 50 --a2a_radius 50 --num_t2m_steps 30 --pl2m_radius 150 --a2m_radius 150 \
+                      --max_epochs 150 --num_workers 4 \
+                      --cart_denoise_inference \
+                    #   --pt2pl_denoise_inference \
+                    #   --pl2pl_denoise_inference \
+                     
+
+
