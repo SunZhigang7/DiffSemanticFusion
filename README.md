@@ -14,16 +14,15 @@ Shichen Tang<sup>1</sup>, Lavdim Halilaj<sup>5</sup>, Juergen Luettin<sup>5</sup
 (\*) Equal contribution. (†) Corresponding author.  
 
 <a href="https://www.arxiv.org/pdf/2508.01778"><img src='https://img.shields.io/badge/arXiv-DiffSemanticFusion-blue' alt='Paper PDF'></a>
+<a href="https://www.arxiv.org/pdf/2508.01778"><img src='https://img.shields.io/badge/Datasets-MaplessQCNet-red' alt='Datasets'></a>
+<a href="https://www.arxiv.org/pdf/2508.01778"><img src='https://img.shields.io/badge/Datasets-Sparse4D-green' alt='Datasets'></a>
+
 </div>
 
 
 ## Overview
 
 ![github_diffsemanticfusion](https://github.com/user-attachments/assets/8bba0baa-252b-4be9-af3c-26f92c9f2f9b)
-
-<div align="center">
-<img src="assets/map_diffusion.jpg" width="400">
-</div>
 
 ## Abstract         
 
