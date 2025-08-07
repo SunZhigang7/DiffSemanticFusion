@@ -31,9 +31,10 @@ Autonomous driving requires accurate scene understanding, including road geometr
 
 
 ## News
-`[2025/08/06]` [ArXiv](https://www.arxiv.org/pdf/2508.01778) paper release. Code/Models are coming soon. Please stay tuned! ☕️
+`[2025/08/06]` [ArXiv](https://www.arxiv.org/pdf/2508.01778) paper release. Code/Models are coming soon. Please stay tuned! ☕️\
+`[2025/08/07]` Open source the mapless QCNet, as we train the model on GPU Cluster, also with the stdout and stderr
 
-This is the official release of DiffSemanticFusion, Our approach reasons over a semantic raster–fused BEV space, enhanced by a map diffusion module that improves both the stability and expressiveness of online HD map representations.
+
 
 ## Updates
 We are going to release code step by step:
