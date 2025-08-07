@@ -1,0 +1,49 @@
+Seed set to 2025
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[rank: 0] Seed set to 2025
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+   | Name                 | Type              | Params
+------------------------------------------------------------
+0  | encoder              | QCNetEncoder      | 3.1 M 
+1  | decoder              | QCNetDecoder      | 4.5 M 
+2  | reg_loss             | NLLLoss           | 0     
+3  | cls_loss             | MixtureNLLLoss    | 0     
+4  | cart_diffusion_loss  | MSELoss           | 0     
+5  | pt2pl_diffusion_loss | MSELoss           | 0     
+6  | pl2pl_diffusion_loss | MSELoss           | 0     
+7  | Brier                | Brier             | 0     
+8  | minADE               | minADE            | 0     
+9  | minAHE               | minAHE            | 0     
+10 | minFDE               | minFDE            | 0     
+11 | minFHE               | minFHE            | 0     
+12 | MR                   | MR                | 0     
+13 | pt2pl_noise_pred_net | ConditionalUnet1D | 3.3 M 
+14 | pl2pl_noise_pred_net | ConditionalUnet1D | 3.3 M 
+15 | cart_noise_pred_net  | ConditionalUnet1D | 3.3 M 
+------------------------------------------------------------
+17.6 M    Trainable params
+0         Non-trainable params
+17.6 M    Total params
+70.511    Total estimated model params size (MB)
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:436: Consider setting `persistent_workers=True` in 'val_dataloader' to speed up the dataloader worker initialization.
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:436: Consider setting `persistent_workers=True` in 'train_dataloader' to speed up the dataloader worker initialization.
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('train_reg_loss_propose', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('train_reg_loss_refine', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('train_cls_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('cart_diffusion_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('pt2pl_diffusion_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+/home/szu3sgh/.conda/envs/navsim_a100/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:441: It is recommended to use `self.log('pl2pl_diffusion_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
