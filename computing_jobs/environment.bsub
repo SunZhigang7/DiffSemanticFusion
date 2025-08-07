@@ -1,0 +1,55 @@
+#!/bin/bash -l
+# Sample script for pytorch job
+
+## Scheduler parameters ##
+
+#BSUB -J environment            # job name
+#BSUB -o /home/szu3sgh/DiffSemanticFusion/computing_jobs/environment.%J.stdout      # optional: Have output written to specific file
+#BSUB -e /home/szu3sgh/DiffSemanticFusion/computing_jobs/environment.%J.stderr      # optional: Have errors written to specific file
+#BSUB -n 8                         # min CPU cores,max CPU cores (max cores is optional)
+#BSUB -M 32288                       # fill in required amount of memory per CPU core(in Mbyte)
+#BSUB -W 150:00                       # fill in desired wallclock time [hours,]minutes (hours are optional)
+#BSUB -gpu "num=1:mode=exclusive_process:mps=no"
+# #BSUB -R "span[hosts=1]"          # optional: run on single host (if using more than 1 CPU cores)
+# #BSUB -R "span[ptile=28]"         # optional: fill in to specify cores per node (max 28)
+# #BSUB -P environment             # optional: fill in cluster project
+
+## Job parameters ##
+
+# Anaconda virtualenv to be used
+# Create before runnign the job with e.g.
+# conda create -n pytorch-3.5 python=3.5 pytorch torchvision
+vEnv=/home/szu3sgh/.conda/envs/navsim_a100 # (please change)
+
+# Load modules
+module purge
+module load conda/4.8.5
+module load cuda/12.1.1
+module load gcc/10.2.0
+
+
+# Activate environment
+source activate $vEnv
+
+# Run your code here (please change, this is only an example)
+# pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cu121
+# pip install torch_geometric
+
+# pip install ninja wheel
+# pip install git+https://github.com/pyg-team/pyg-lib.git
+# pip install torch-scatter
+# pip install torch-scatter torch-sparse
+# pip install torch-cluster
+# pip install torch-spline-conv
+# pip install lightning==2.4
+# pip install pandas
+# pip install -e av2-api
+# pip install ipykernel
+# pip install lightning[extra]
+# pip install diffusers
+# pip install diffusers[torch] transformers
+
+# pip install trajdata==1.3.1
+# pip install "trajdata[nusc]"
+# pip install seaborn==0.13.0
+pip install matplotlib==3.5.2
