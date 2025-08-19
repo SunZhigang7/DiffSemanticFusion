@@ -33,6 +33,8 @@ Autonomous driving requires accurate scene understanding, including road geometr
 ## News
 `[2025/08/06]` [ArXiv](https://www.arxiv.org/pdf/2508.01778) paper release. Code/Models are coming soon. Please stay tuned! ☕️\
 `[2025/08/07]` Open source the mapless QCNet, as we train the model on GPU Cluster, also with the stdout and stderr
+`[2025/08/19]` Provide quite detail training and eval process of Mapless QCNet, as shown in computing_jobs/qc_net_mapless_prediction_train.8564846.stdout
+
 
 
 
