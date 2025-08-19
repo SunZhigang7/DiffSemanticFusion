@@ -4,8 +4,8 @@
 ## Scheduler parameters ##
 
 #BSUB -J qc_net_mapless_prediction_train             # job name
-#BSUB -o /home/szu3sgh/DiffSemanticFusion/computing_jobs/qc_net_mapless_prediction_train.%J.stdout      # optional: Have output written to specific file
-#BSUB -e /home/szu3sgh/DiffSemanticFusion/computing_jobs/qc_net_mapless_prediction_train.%J.stderr      # optional: Have errors written to specific file
+#BSUB -o /home/szu3sgh/DiffSemanticFusion_MaplessQCNet/computing_jobs/qc_net_mapless_prediction_train.%J.stdout      # optional: Have output written to specific file
+#BSUB -e /home/szu3sgh/DiffSemanticFusion_MaplessQCNet/computing_jobs/qc_net_mapless_prediction_train.%J.stderr      # optional: Have errors written to specific file
 #BSUB -n 2                         # min CPU cores,max CPU cores (max cores is optional)
 #BSUB -M 32000                       # fill in required amount of memory per CPU core(in Mbyte)
 #BSUB -W 60:00                       # fill in desired wallclock time [hours,]minutes (hours are optional)
